@@ -1,0 +1,56 @@
+{
+  "expo": {
+    "name": "OtoMenzil",
+    "slug": "otomenzil",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0c0a09"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.otomenzil.app",
+      "infoPlist": {
+        "UIBackgroundModes": ["remote-notification"],
+        "NSLocationWhenInUseUsageDescription": "Yakınınızdaki şarj istasyonlarını gösterebilmek için konumunuza ihtiyaç duyuyoruz."
+      }
+    },
+    "android": {
+      "package": "com.otomenzil.app",
+      "adaptiveIcon": {
+        "backgroundColor": "#0c0a09",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "permissions": ["ACCESS_COARSE_LOCATION", "ACCESS_FINE_LOCATION", "POST_NOTIFICATIONS"],
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-image",
+      "expo-font",
+      "expo-secure-store",
+      "expo-web-browser",
+      "expo-splash-screen",
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Yakınınızdaki şarj istasyonlarını gösterebilmek için konumunuza ihtiyaç duyuyoruz."
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "color": "#f97316"
+        }
+      ]
+    ]
+  }
+}
